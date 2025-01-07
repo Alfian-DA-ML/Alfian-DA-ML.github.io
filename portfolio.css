@@ -1,0 +1,407 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #006dd6; /* Warna biru navbar */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+section {
+  scroll-margin-top: 60px; /* Sesuaikan 80px dengan tinggi navbar Anda */
+}
+
+.jumbotron {
+  background-color: #eef2f7; /* Warna biru lembut yang sesuai dengan navbar */
+  color: #212529; /* Warna teks gelap untuk kontras */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.jumbotron img {
+  border: 4.5px solid #e3f2fd; /* Warna biru serasi */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #212529; /* Warna biru yang lebih gelap */
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #495057; /* Warna teks abu-abu gelap */
+}
+
+.jumbotron .btn {
+  margin-top: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #007bff; /* Warna biru serasi */
+  border: none;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.jumbotron .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section Styling */
+#about {
+  margin-top: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f8f9fa; /* Warna latar abu-abu terang */
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk judul About Me */
+#about h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #212529; /* Warna biru navbar */
+}
+
+/* Styling untuk box di dalam About Me */
+#about .col-4 {
+  margin: 10px;
+  padding: 20px;
+  background-color: #ffffff; /* Tetap putih untuk kontras */
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efek hover pada box */
+#about .col-4:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #e3f2fd; /* Tambahkan warna hover biru lembut */
+}
+
+/* Styling untuk gambar/icon di dalam box */
+#about .col-4 img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  background-color: #e3f2fd; /* Warna biru serasi */
+  padding: 15px;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+/* Efek hover pada gambar/icon */
+#about .col-4 img:hover {
+  transform: rotate(10deg) scale(1.1);
+  background-color: #0056b3; /* Warna biru lebih gelap */
+}
+
+/* Styling untuk teks di dalam box */
+#about .col-4 p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057; /* Warna teks abu-abu gelap */
+}
+
+/* Responsiveness untuk About Section */
+@media (max-width: 768px) {
+  #about .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menyelaraskan kotak di tengah */
+  }
+
+  #about .col-4 {
+    width: 90%; /* Membuat kotak lebih kecil agar tidak terlalu lebar */
+    margin-bottom: 20px; /* Tambahkan jarak antar kotak */
+  }
+}
+
+/* Skills Section Styling */
+#skills {
+  margin-top: 0;
+  padding: 40px 0;
+  background-color: #eef2f7;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#skills h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #212529;
+}
+
+/* Slider Container */
+.skills-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.skills-slider::-webkit-scrollbar {
+  height: 10px;
+}
+
+.skills-slider::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.skills-slider::-webkit-scrollbar-track {
+  background-color: #e3f2fd;
+}
+
+/* Individual Skills Items */
+.skills-item {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.skills-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.skills-item p {
+  font-size: 0.9rem;
+  color: #495057;
+  line-height: 1.5;
+}
+
+.skills-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section Responsiveness */
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 576px) {
+  .skills-item {
+    width: 200px; /* Perkecil ukuran box */
+  }
+
+  #skills h2 {
+    font-size: 1.5rem; /* Perkecil ukuran heading */
+  }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (max-width: 768px) {
+  .skills-item {
+    width: 220px;
+  }
+
+  .skills-slider {
+    gap: 15px; /* Kurangi jarak antar box */
+  }
+}
+
+/* Untuk layar besar (desktop kecil) */
+@media (max-width: 992px) {
+  .skills-item {
+    width: 240px;
+  }
+
+  .skills-slider {
+    gap: 18px;
+  }
+}
+
+.skills-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Ganti dari hidden ke auto */
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.skills-slider:hover {
+  overflow-x: auto; /* Tidak diperlukan jika sudah auto secara default */
+}
+
+/* Kustomisasi scrollbar */
+.skills-slider::-webkit-scrollbar {
+  height: 8px; /* Tinggi scrollbar horizontal */
+}
+
+.skills-slider::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Warna scrollbar */
+  border-radius: 4px; /* Membuat sudutnya membulat */
+}
+
+.skills-slider::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Warna latar track */
+}
+
+/* Tambahkan kode cssnya di sini */
+/* Styling Tombol */
+.button-custom {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+  margin-right: 10px; /* Menambahkan jarak antara tombol */
+}
+
+.button-custom:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); /* Efek hover */
+}
+
+/* Mengatur container tombol agar sejajar */
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.skills-item .button-custom {
+  margin-top: auto;
+  align-self: center;
+}
+
+/* Projects Section */
+#projects {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+#projects h2 {
+  font-weight: bold;
+}
+
+#projects .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+#projects .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#projects .card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+#projects .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#projects .card-img-top {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+#projects .card-body {
+  padding: 20px;
+}
+
+#projects .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#projects .card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+#projects .btn {
+  display: inline-block;
+  padding: 10px 25px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+#projects .btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); /* Efek hover */
+}
+
+@media (max-width: 767px) {
+  #projects .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* CSS untuk Contact Section */
+/* CSS untuk Contact Section */
+#contact img {
+  width: 30px; /* Ukuran ikon */
+  height: 30px; /* Tinggi yang sama */
+  object-fit: contain; /* Menjaga proporsi gambar */
+  margin: 5px; /* Jarak antar ikon */
+  transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi yang halus */
+}
+
+/* Efek hover */
+#contact img:hover {
+  transform: scale(1.5); /* Membesarkan ikon */
+  box-shadow: none; /* Menghilangkan efek kotak */
+  cursor: pointer; /* Mengubah kursor menjadi pointer */
+}

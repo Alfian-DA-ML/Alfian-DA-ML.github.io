@@ -263,6 +263,56 @@ section {
   margin-bottom: 10px;
 }
 
+/* --- Custom Flexbox Slider untuk Projects --- */
+.custom-slider {
+  display: flex;
+  flex-wrap: nowrap; /* Mencegah card turun ke bawah kalau sudah banyak */
+  overflow-x: auto;  /* Mengaktifkan fitur geser (scroll) horizontal */
+  padding-bottom: 20px; /* Memberi ruang untuk scrollbar dan shadow hover */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll di HP */
+}
+
+/* Jika itemnya cuma sedikit (1 atau 2), otomatis ke tengah */
+.custom-slider.justify-content-center {
+  justify-content: center;
+}
+
+/* Mengatur ukuran tiap card saat mode geser aktif */
+.project-item {
+  flex: 0 0 auto; /* Mencegah card menyusut */
+  width: 100%;    /* Default full-screen di HP */
+}
+
+/* Responsivitas Ukuran Card dalam Slider */
+@media (min-width: 576px) {
+  .project-item {
+    width: 50%;   /* Tablet/HP Landscape: muat 2 card */
+  }
+}
+
+@media (min-width: 992px) {
+  .project-item {
+    width: 33.333%; /* Desktop: muat 3 card */
+  }
+}
+
+/* Mempercantik tampilan scrollbar biar menyatu dengan tema */
+.custom-slider::-webkit-scrollbar {
+  height: 8px;
+}
+.custom-slider::-webkit-scrollbar-track {
+  background: var(--bg-light);
+  border-radius: 10px;
+}
+.custom-slider::-webkit-scrollbar-thumb {
+  background: #cdd4da;
+  border-radius: 10px;
+}
+.custom-slider::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
 /* --- Contact Section --- */
 #contact { background-color: var(--bg-light) !important; }
 

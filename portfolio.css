@@ -48,24 +48,21 @@ body {
     background-color: #e9ecef;
 }
 
-/* --- HERO SECTION (NEW GRADIENT SPLIT) --- */
+/* --- HERO SECTION --- */
 .hero-section {
-  min-height: 90vh; /* Tinggi hampir full layar */
-  /* Background Gradasi Biru Muda yang Elegan */
+  min-height: 90vh;
   background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%); 
   padding-top: 80px;
   position: relative;
 }
 
-/* Wrapper Img: Desktop rata kanan, Mobile rata tengah */
 .wrapper-img {
   position: relative;
   display: flex;
-  justify-content: center; /* Default mobile */
+  justify-content: center;
   align-items: center;
 }
 
-/* Glow Effect - Halus */
 .hero-glow {
   position: absolute;
   top: 50%;
@@ -73,13 +70,12 @@ body {
   transform: translate(-50%, -50%);
   width: 400px;
   height: 400px;
-  background-color: rgba(0, 109, 214, 0.1); /* Biru sangat transparan */
+  background-color: rgba(0, 109, 214, 0.1);
   border-radius: 50%;
   filter: blur(60px);
   z-index: 0;
 }
 
-/* Foto Profil */
 .profile-img {
   width: 280px;
   height: 280px;
@@ -107,7 +103,6 @@ body {
     font-weight: 400;
 }
 
-/* Tombol Download */
 .hero-section .btn {
     box-shadow: 0 4px 15px rgba(0, 109, 214, 0.25);
     transition: all 0.3s;
@@ -119,19 +114,15 @@ body {
     box-shadow: 0 8px 25px rgba(0, 109, 214, 0.35);
 }
 
-/* Styling Ikon Sosmed Kecil di Hero */
 .hero-social-links img {
     width: 35px;
     height: 35px;
     margin-left: 15px;
-    /* opacity: 0.7;  <-- Hapus atau comment ini kalau mau warnanya tajam banget */
     transition: all 0.3s;
-    /* filter: grayscale(100%); <-- HAPUS BARIS INI */
 }
 
 .hero-social-links img:hover {
     transform: scale(1.1);
-    /* filter: grayscale(0%); <-- Hapus ini juga karena sudah tidak perlu */
     opacity: 1;
 }
 
@@ -187,7 +178,6 @@ section {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-/* Hover: Warna Ice Blue (Ikon tetap terlihat) */
 .about-card:hover img {
   transform: rotate(10deg);
   background-color: #cff4fc; 
@@ -263,55 +253,108 @@ section {
   margin-bottom: 10px;
 }
 
-/* --- Custom Flexbox Slider untuk Projects --- */
-.custom-slider {
+/* ===== PROJECTS CAROUSEL ===== */
+.projects-carousel-wrapper {
   display: flex;
-  flex-wrap: nowrap; /* Mencegah card turun ke bawah kalau sudah banyak */
-  overflow-x: auto;  /* Mengaktifkan fitur geser (scroll) horizontal */
-  padding-bottom: 20px; /* Memberi ruang untuk scrollbar dan shadow hover */
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* Smooth scroll di HP */
+  align-items: center;
+  gap: 12px;
 }
 
-/* Jika itemnya cuma sedikit (1 atau 2), otomatis ke tengah */
-.custom-slider.justify-content-center {
+.projects-track-container {
+  overflow: hidden;
+  flex: 1;
+  /* Beri ruang atas/bawah agar hover shadow kartu tidak terpotong */
+  padding: 10px 4px 20px 4px;
+}
+
+.projects-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  align-items: stretch;
+}
+
+/* Desktop: 3 kartu | Tablet: 2 kartu | Mobile: 1 kartu */
+.project-slide {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 0;
+}
+
+@media (max-width: 991px) {
+  .project-slide {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 575px) {
+  .project-slide {
+    flex: 0 0 100%;
+  }
+}
+
+/* Tombol panah */
+.carousel-btn {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background: #fff;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  transition: background 0.2s, color 0.2s, opacity 0.2s, transform 0.2s;
+  box-shadow: 0 2px 10px rgba(0, 109, 214, 0.15);
+  z-index: 2;
 }
 
-/* Mengatur ukuran tiap card saat mode geser aktif */
-.project-item {
-  flex: 0 0 auto; /* Mencegah card menyusut */
-  width: 100%;    /* Default full-screen di HP */
-}
-
-/* Responsivitas Ukuran Card dalam Slider */
-@media (min-width: 576px) {
-  .project-item {
-    width: 50%;   /* Tablet/HP Landscape: muat 2 card */
-  }
-}
-
-@media (min-width: 992px) {
-  .project-item {
-    width: 33.333%; /* Desktop: muat 3 card */
-  }
-}
-
-/* Mempercantik tampilan scrollbar biar menyatu dengan tema */
-.custom-slider::-webkit-scrollbar {
-  height: 8px;
-}
-.custom-slider::-webkit-scrollbar-track {
-  background: var(--bg-light);
-  border-radius: 10px;
-}
-.custom-slider::-webkit-scrollbar-thumb {
-  background: #cdd4da;
-  border-radius: 10px;
-}
-.custom-slider::-webkit-scrollbar-thumb:hover {
+.carousel-btn:hover:not(:disabled) {
   background: var(--primary-color);
+  color: #fff;
+  transform: scale(1.08);
 }
+
+.carousel-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mobile: sembunyikan tombol, pakai swipe */
+@media (max-width: 575px) {
+  .carousel-btn {
+    display: none;
+  }
+}
+
+/* Dots indikator */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #dee2e6;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.carousel-dot.active {
+  background: var(--primary-color);
+  transform: scale(1.3);
+}
+/* ===== END CAROUSEL ===== */
 
 /* --- Contact Section --- */
 #contact { background-color: var(--bg-light) !important; }
@@ -329,29 +372,25 @@ section {
   cursor: pointer;
 }
 
-/* --- RESPONSIVE MOBILE FIXES --- */
+/* --- RESPONSIVE --- */
 @media (min-width: 992px) {
-    /* Desktop Only: Gambar rata kanan */
     .wrapper-img {
         justify-content: flex-end; 
         padding-right: 20px;
     }
 }
 
-@media (max-width: 991px) { /* Breakpoint Tablet & Mobile */
+@media (max-width: 991px) {
   .hero-section {
     padding-top: 120px;
     text-align: center !important;
   }
-  
-  /* Reset posisi elemen ke tengah di HP */
+
   .wrapper-img { justify-content: center !important; }
   .text-lg-start, .text-lg-end { text-align: center !important; padding: 0 !important; }
 
-  /* Perkecil elemen di HP biar pas */
   .hero-glow { width: 300px; height: 300px; }
   
-  /* Jarak foto ke teks ditambah biar ga nabrak */
   .profile-img { 
       width: 220px; 
       height: 220px; 
@@ -361,6 +400,18 @@ section {
   .hero-title { font-size: 2.5rem; }
   .hero-subtitle { font-size: 1.1rem; }
   
-  /* Ikon sosmed kasih jarak atas */
   .hero-social-links { margin-top: 25px !important; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .profile-img { width: 180px; height: 180px; }
+  .hero-glow { width: 240px; height: 240px; }
+
+  section { padding: 60px 0; }
+
+  .about-card, .skills-item { padding: 24px 16px; }
+
+  #contact img { width: 40px; height: 40px; margin: 0 6px; }
 }

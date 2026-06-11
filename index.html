@@ -76,6 +76,7 @@
         </div>
       </div>
     </section>
+
     <section id="about">
       <div class="container">
         <div class="row text-center mb-5">
@@ -85,21 +86,21 @@
           </div>
         </div>
         <div class="row justify-content-center g-4">
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-6">
             <div class="about-card h-100">
                 <img src="img2/education_3197944.png" alt="Education" />
                 <h3>Education</h3>
                 <p>Currently a student in Applied and Computational Statistics at Universitas Negeri Semarang (UNNES).</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-6">
             <div class="about-card h-100">
                 <img src="img2/Expirience.png" alt="Experience" />
                 <h3>Experience</h3>
                 <p>Lecture Assistant in statistics computing, data mining, programming; and Machine learning mentor for lab assistants</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-10">
             <div class="about-card h-100">
                 <img src="img2/neural-network-icon-8.jpg" alt="Goals" />
                 <h3>Goals & Interest</h3>
@@ -119,21 +120,21 @@
           </div>
         </div>
         <div class="row justify-content-center g-4">
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-6">
             <div class="skills-item h-100">
               <img src="img3/3.png" alt="Data Science" />
               <h3>Data Science and AI</h3>
               <p>Proficient in Python for statistical analysis, machine learning, computer vision, and generative AI.</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-6">
             <div class="skills-item h-100">
               <img src="img3/16.png" alt="Mobile" />
               <h3>Software Development</h3>
               <p>Experienced in developing cross-platform applications and backend integration.</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-10">
             <div class="skills-item h-100">
               <img src="img3/6.png" alt="Database" />
               <h3>Database</h3>
@@ -144,6 +145,7 @@
       </div>
     </section>
     
+    <!-- ===== PROJECTS SECTION (CAROUSEL) ===== -->
     <section id="projects">
       <div class="container">
         <div class="row text-center mb-5">
@@ -152,48 +154,75 @@
             <div class="bar-accent"></div>
           </div>
         </div>
-        
-        <div class="row justify-content-center g-4">
-          
-          <!-- Project 1: Booking MathLab -->
-          <div class="col-12 col-sm-6 col-md-4 project-item">
-            <div class="card project-card h-100">
-              <img src="img/bookingmathlab_logo_lebar-removebg.png" class="card-img-top" alt="Booking MathLab UNNES" width="256" height="256"/>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">Booking MathLab UNNES</h5>
-                <p class="card-text text-muted flex-grow-1">Booking Math Lab UNNES is a cross platform application (for android, and desktop) that functions for booking (user) and management (admin) rooms and tools in Mathematics Laboratory Universitas Negeri Semarang.</p>
-                <a href="https://github.com/Alfian-DA-ML/bookingmathlabunnes" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
+
+        <div class="projects-carousel-wrapper">
+          <button class="carousel-btn carousel-btn-prev" id="prevBtn" aria-label="Previous">&#8592;</button>
+
+          <div class="projects-track-container">
+            <div class="projects-track" id="projectsTrack">
+
+              <!-- Project 1: Booking MathLab -->
+              <div class="project-slide">
+                <div class="card project-card h-100">
+                  <img src="img/bookingmathlab_logo_lebar-removebg.png" class="card-img-top" alt="Booking MathLab UNNES" />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Booking MathLab UNNES</h5>
+                    <p class="card-text text-muted flex-grow-1">Booking Math Lab UNNES is a cross platform application (for android, and desktop) that functions for booking (user) and management (admin) rooms and tools in Mathematics Laboratory Universitas Negeri Semarang.</p>
+                    <a href="https://github.com/Alfian-DA-ML/bookingmathlabunnes" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
+                  </div>
+                </div>
               </div>
+
+              <!-- Project 2: SIBI's AI -->
+              <div class="project-slide">
+                <div class="card project-card h-100">
+                  <img src="img/Y.png" class="card-img-top" alt="SIBI's AI" />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">SIBI's AI</h5>
+                    <p class="card-text text-muted flex-grow-1">Real-time computer vision application to recognize Indonesian Sign Language (SIBI) alphabets (A-Y) using MediaPipe and a custom lightweight CNN (SIBINet).</p>
+                    <a href="https://github.com/Alfian-DA-ML/SIBI-s-AI" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3: SIPATEN -->
+              <div class="project-slide">
+                <div class="card project-card h-100">
+                  <img src="img/SIPATEN.png" class="card-img-top" alt="SIPATEN" />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">SIPATEN</h5>
+                    <p class="card-text text-muted flex-grow-1">SIPATEN: Sistem Informasi Pantauan Tentang Kinerja (Private APPS for staff BPS Kab. Pekalongan).</p>
+                    <a href="https://drive.google.com/drive/folders/1NFhDe4m4dZ-IN_6iDfPrR9QVdP0gfqsS?hl=ID" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 4: UFC-TB -->
+              <div class="project-slide">
+                <div class="card project-card h-100">
+                  <img src="img/gradcam.png" class="card-img-top" alt="UFC-TB" />
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">UFC-TB: Unified Framework Classification for Tuberculosis</h5>
+                    <p class="card-text text-muted flex-grow-1">UFC-TB is a lightweight CNN architecture designed for chest X-ray classification, combining residual connections, depthwise convolution, and Grad-CAM-based model interpretability.</p>
+                    <a href="https://drive.google.com/drive/folders/1NFhDe4m4dZ-IN_6iDfPrR9QVdP0gfqsS?hl=ID" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TAMBAH PROJECT BARU: copy blok .project-slide di atas -->
+
             </div>
           </div>
 
-          <!-- Project 2: SIBI's AI -->
-          <div class="col-12 col-sm-6 col-md-4 project-item">
-            <div class="card project-card h-100">
-              <img src="img/Y.png" class="card-img-top" alt="SIBI's AI" width="256" height="256"/>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">SIBI's AI</h5>
-                <p class="card-text text-muted flex-grow-1">Real-time computer vision application to recognize Indonesian Sign Language (SIBI) alphabets (A-Y) using MediaPipe and a custom lightweight CNN (SIBINet).</p>
-                <a href="https://github.com/Alfian-DA-ML/SIBI-s-AI" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
-              </div>
-            </div>
-          </div>
+          <button class="carousel-btn carousel-btn-next" id="nextBtn" aria-label="Next">&#8594;</button>
+        </div>
 
-          <!-- Project 3: SIPATEN -->
-          <div class="col-12 col-sm-6 col-md-4 project-item">
-            <div class="card project-card h-100">
-              <img src="img/SIPATEN.png" class="card-img-top" alt="SIPATEN" width="256" height="256"/>
-              <div class="card-body d-flex flex-column">
-                <h5 class="card-title">SIPATEN</h5>
-                <p class="card-text text-muted flex-grow-1">SIPATEN: Sistem Informasi Pantauan Tentang Kinerja (Private APPS for staff BPS Kab. Pekalongan).</p>
-                <a href="https://drive.google.com/drive/folders/1NFhDe4m4dZ-IN_6iDfPrR9QVdP0gfqsS?hl=ID" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
-              </div>
-            </div>
-          </div>
-          
-        </div> <!-- Penutup untuk div .row -->
-      </div> <!-- Penutup untuk div .container -->
+        <!-- Dots Indikator -->
+        <div class="carousel-dots" id="carouselDots"></div>
+
+      </div>
     </section>
+    <!-- ===== END PROJECTS SECTION ===== -->
 
     <section id="contact" class="text-center">
       <div class="container">
@@ -204,7 +233,7 @@
             <p class="text-muted mt-3">Feel free to contact me through any of the platforms provided below</p>
           </div>
         </div>
-        <div class="d-flex justify-content-center gap-3">
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
             <a href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=adipratamaalfian45@gmail.com" target="_blank">
                 <img src="img5/Gmail.png" alt="Email" />
             </a>
@@ -226,5 +255,87 @@
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- ===== CAROUSEL SCRIPT ===== -->
+    <script>
+      (function () {
+        const track = document.getElementById('projectsTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('carouselDots');
+        const slides = Array.from(track.querySelectorAll('.project-slide'));
+
+        function getVisible() {
+          if (window.innerWidth >= 992) return 3;
+          if (window.innerWidth >= 576) return 2;
+          return 1;
+        }
+
+        let current = 0;
+
+        function getMaxIndex() {
+          return Math.max(0, slides.length - getVisible());
+        }
+
+        function buildDots() {
+          dotsContainer.innerHTML = '';
+          const total = getMaxIndex() + 1;
+          for (let i = 0; i < total; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+            dot.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(dot);
+          }
+        }
+
+        function updateDots() {
+          dotsContainer.querySelectorAll('.carousel-dot')
+            .forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        function goTo(index) {
+          const maxIndex = getMaxIndex();
+          current = Math.max(0, Math.min(index, maxIndex));
+          const gap = 24;
+          const slideWidth = slides[0].offsetWidth;
+          track.style.transform = `translateX(-${current * (slideWidth + gap)}px)`;
+          prevBtn.disabled = current === 0;
+          nextBtn.disabled = current >= maxIndex;
+          updateDots();
+        }
+
+        prevBtn.addEventListener('click', () => goTo(current - 1));
+        nextBtn.addEventListener('click', () => goTo(current + 1));
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        track.addEventListener('touchstart', (e) => {
+          touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+        track.addEventListener('touchend', (e) => {
+          const diff = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) {
+            diff > 0 ? goTo(current + 1) : goTo(current - 1);
+          }
+        }, { passive: true });
+
+        function init() {
+          current = 0;
+          buildDots();
+          goTo(0);
+        }
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(init, 150);
+        });
+
+        init();
+      })();
+    </script>
+    <!-- ===== END CAROUSEL SCRIPT ===== -->
+
   </body>
 </html>

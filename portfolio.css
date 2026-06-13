@@ -24,7 +24,7 @@ body {
   z-index: 1000;
   background-color: var(--primary-color);
   padding: 12px 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -33,25 +33,25 @@ body {
 }
 
 .nav-link {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .btn-contact {
-    background-color: white;
-    color: var(--primary-color) !important;
-    border-radius: 20px;
-    padding: 5px 20px !important;
-    margin-left: 10px;
+  background-color: white;
+  color: var(--primary-color) !important;
+  border-radius: 20px;
+  padding: 5px 20px !important;
+  margin-left: 10px;
 }
 
 .btn-contact:hover {
-    background-color: #e9ecef;
+  background-color: #e9ecef;
 }
 
 /* --- HERO SECTION --- */
 .hero-section {
   min-height: 90vh;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%); 
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
   padding-top: 80px;
   position: relative;
 }
@@ -88,45 +88,45 @@ body {
 }
 
 .profile-img:hover {
-    transform: scale(1.03) rotate(2deg);
+  transform: scale(1.03) rotate(2deg);
 }
 
 .hero-title {
-    font-size: 3.5rem; 
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-    color: #0b2545;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: #0b2545;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    font-weight: 400;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 .hero-section .btn {
-    box-shadow: 0 4px 15px rgba(0, 109, 214, 0.25);
-    transition: all 0.3s;
-    padding: 12px 30px;
+  box-shadow: 0 4px 15px rgba(0, 109, 214, 0.25);
+  transition: all 0.3s;
+  padding: 12px 30px;
 }
 
 .hero-section .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 109, 214, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 109, 214, 0.35);
 }
 
 .hero-social-links img {
-    width: 35px;
-    height: 35px;
-    margin-left: 15px;
-    transition: all 0.3s;
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
+  transition: all 0.3s;
 }
 
 .hero-social-links img:hover {
-    transform: scale(1.1);
-    opacity: 1;
+  transform: scale(1.1);
+  opacity: 1;
 }
 
-/* --- Section Global Styling --- */
+/* --- Section Global --- */
 section {
   padding: 80px 0;
   scroll-margin-top: 70px;
@@ -141,11 +141,11 @@ section {
 }
 
 .bar-accent {
-    width: 60px;
-    height: 4px;
-    background-color: var(--primary-color);
-    margin: 0 auto 40px auto;
-    border-radius: 2px;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 0 auto 40px auto;
+  border-radius: 2px;
 }
 
 /* --- About Section --- */
@@ -157,7 +157,7 @@ section {
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -172,7 +172,7 @@ section {
   height: 70px;
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #e3f2fd; 
+  background-color: #e3f2fd;
   border-radius: 50%;
   object-fit: contain;
   transition: transform 0.3s, background-color 0.3s;
@@ -180,7 +180,7 @@ section {
 
 .about-card:hover img {
   transform: rotate(10deg);
-  background-color: #cff4fc; 
+  background-color: #cff4fc;
 }
 
 .about-card h3 {
@@ -263,7 +263,7 @@ section {
 .projects-track-container {
   overflow: hidden;
   flex: 1;
-  /* Beri ruang atas/bawah agar hover shadow kartu tidak terpotong */
+  /* Padding atas/bawah agar shadow hover kartu tidak terpotong */
   padding: 10px 4px 20px 4px;
 }
 
@@ -275,18 +275,20 @@ section {
   align-items: stretch;
 }
 
-/* Desktop: 3 kartu | Tablet: 2 kartu | Mobile: 1 kartu */
+/* Desktop: 3 kartu */
 .project-slide {
   flex: 0 0 calc((100% - 48px) / 3);
   min-width: 0;
 }
 
+/* Tablet: 2 kartu */
 @media (max-width: 991px) {
   .project-slide {
     flex: 0 0 calc((100% - 24px) / 2);
   }
 }
 
+/* Mobile: 1 kartu */
 @media (max-width: 575px) {
   .project-slide {
     flex: 0 0 100%;
@@ -324,7 +326,7 @@ section {
   transform: none;
 }
 
-/* Mobile: sembunyikan tombol, pakai swipe */
+/* Sembunyikan tombol di mobile kecil, pakai swipe */
 @media (max-width: 575px) {
   .carousel-btn {
     display: none;
@@ -372,12 +374,12 @@ section {
   cursor: pointer;
 }
 
-/* --- RESPONSIVE --- */
+/* --- Responsive --- */
 @media (min-width: 992px) {
-    .wrapper-img {
-        justify-content: flex-end; 
-        padding-right: 20px;
-    }
+  .wrapper-img {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -385,21 +387,16 @@ section {
     padding-top: 120px;
     text-align: center !important;
   }
-
   .wrapper-img { justify-content: center !important; }
   .text-lg-start, .text-lg-end { text-align: center !important; padding: 0 !important; }
-
   .hero-glow { width: 300px; height: 300px; }
-  
-  .profile-img { 
-      width: 220px; 
-      height: 220px; 
-      margin-bottom: 35px; 
+  .profile-img {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 35px;
   }
-
   .hero-title { font-size: 2.5rem; }
   .hero-subtitle { font-size: 1.1rem; }
-  
   .hero-social-links { margin-top: 25px !important; }
 }
 
@@ -408,10 +405,7 @@ section {
   .hero-subtitle { font-size: 1rem; }
   .profile-img { width: 180px; height: 180px; }
   .hero-glow { width: 240px; height: 240px; }
-
   section { padding: 60px 0; }
-
   .about-card, .skills-item { padding: 24px 16px; }
-
   #contact img { width: 40px; height: 40px; margin: 0 6px; }
 }

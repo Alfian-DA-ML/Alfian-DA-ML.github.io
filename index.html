@@ -1,358 +1,650 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
+    <!-- =========================================================
+      BASIC META
+      ========================================================= -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- =========================================================
+      GOOGLE FONT
+      ========================================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- =========================================================
+      BOOTSTRAP
+      ========================================================= -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
+    <!-- =========================================================
+      CUSTOM CSS
+      ========================================================= -->
     <link rel="stylesheet" href="portfolio.css" />
 
     <title>Alfian Adi Pratama | Portfolio</title>
   </head>
-  <body id="home">
-    
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+
+  <body>
+    <!-- =========================================================
+      NAVBAR
+      - Fixed top.
+      - Active menu akan berpindah saat klik/scroll.
+      ========================================================= -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
       <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-          <span style="position: relative; top: 1px; line-height: 1;">ALFIAN</span>
+        <!-- Brand dibuat singkat supaya tidak repetitif dengan nama di hero -->
+        <a class="navbar-brand" href="#home" aria-label="Go to home section">
+          <img src="img/LOGO_no-bg.png" alt="AAP Logo" class="navbar-logo" />
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Mobile toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navbar menu -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              <a class="nav-link active" href="#home">Home</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link active" href="#about">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link active" href="#skills">Skills</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link active" href="#projects">Projects</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link btn-contact" href="#contact">Contact</a>
+              <a class="nav-link contact-link" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section class="hero-section d-flex align-items-center">
-      <div class="container position-relative">
-        <div class="row align-items-center justify-content-center">
-          
-          <div class="col-lg-6 col-md-12 order-2 order-lg-1 text-center text-lg-start pe-lg-5">
-            <span class="badge rounded-pill bg-light text-primary mb-3 px-3 py-2 shadow-sm border">
-               👋 Hello, It's Me
-            </span>
-            <h1 class="display-4 fw-bold text-dark hero-title">Alfian Adi Pratama</h1>
-            <p class="lead text-muted mb-4 hero-subtitle">Software and ML Engineer</p>
-            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-start gap-3">
-              <a class="btn btn-primary btn-lg rounded-pill px-4 shadow-btn" href="https://docs.google.com/document/d/1zDeTrxZf5ySH-AwSQZAunQdoi-5m9eVJ/edit?usp=sharing&ouid=107799915890033578308&rtpof=true&sd=true" role="button" target="_blank">Download CV</a>
-              <div class="hero-social-links mt-3 mt-sm-0">
-                <a href="https://www.linkedin.com/in/alfian19/" target="_blank" title="LinkedIn"><img src="img5/linkedin-logo-512x512.png" alt="LinkedIn"></a>
-                <a href="https://github.com/Alfian-DA-ML" target="_blank" title="GitHub"><img src="img5/github_512_black.png" alt="GitHub"></a>
+    <main>
+      <!-- =========================================================
+        HERO SECTION
+        Desktop:
+        - Text di kiri
+        - Foto di kanan
+
+        Mobile:
+        - Foto muncul dulu
+        - Text dan tombol muncul setelah foto
+        ========================================================= -->
+      <section id="home" class="hero-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-center gy-5">
+            <!-- Hero text -->
+            <div class="col-lg-7 order-2 order-lg-1">
+              <div class="hero-content">
+                <h1>Alfian Adi Pratama</h1>
+
+                <h2>Software and AI/ML Engineer</h2>
+
+                <p>
+                  Building backend systems, data-driven applications, and
+                  practical AI solutions.
+                </p>
+
+                <a
+                  class="btn-main"
+                  href="https://docs.google.com/document/d/1zDeTrxZf5ySH-AwSQZAunQdoi-5m9eVJ/edit?usp=sharing&ouid=107799915890033578308&rtpof=true&sd=true"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download CV
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero image -->
+            <div class="col-lg-5 order-1 order-lg-2">
+              <div class="hero-image-wrap">
+                <div class="hero-glow"></div>
+
+                <img
+                  src="img/My foto.jpg"
+                  alt="Alfian Adi Pratama"
+                  class="profile-img"
+                />
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6 col-md-12 order-1 order-lg-2 text-center text-lg-end ps-lg-5 position-relative wrapper-img">
-            <div class="hero-glow"></div>
-            <img src="img/My foto.jpg" alt="Alfian Adi Pratama" class="profile-img shadow-lg" />
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="about">
-      <div class="container">
-        <div class="row text-center mb-5">
-          <div class="col">
-            <h2 class="section-title">About Me</h2>
-            <div class="bar-accent"></div>
+      <!-- =========================================================
+        ABOUT SECTION
+        Dibuat singkat, tidak memakai card agar tidak repetitif.
+        ========================================================= -->
+      <section id="about" class="section-block">
+        <div class="container">
+          <div class="section-header">
+            <h2>About Me</h2>
           </div>
-        </div>
-        <div class="row justify-content-center g-4">
-          <div class="col-md-4 col-sm-6">
-            <div class="about-card h-100">
-              <img src="img2/education_3197944.png" alt="Education" />
-              <h3>Education</h3>
-              <p>Currently a student in Applied Statistics and Computing at Universitas Negeri Semarang (UNNES).</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="about-card h-100">
-              <img src="img2/Expirience.png" alt="Experience" />
-              <h3>Experience</h3>
-              <p>Lecture assistant in statistics computing, data mining, programming, machine learning mentor for lab assistants, and intern web developer at BPS</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-10">
-            <div class="about-card h-100">
-              <img src="img2/neural-network-icon-8.jpg" alt="Goals" />
-              <h3>Goals & Interest</h3>
-              <p>Bridging Machine Learning and AI with mobile architecture to deliver high-performance, intelligent, and cross-platform on-device solutions.</p>
+
+          <div class="about-box">
+            <p>
+              Software and AI/ML Engineer with hands-on experience in building
+              backend systems, data-driven applications, and AI-powered
+              solutions through academic, internship, and personal projects.
+              Currently focused on backend engineering, applied machine
+              learning, and practical AI integration.
+            </p>
+
+            <div class="about-focus">
+              <span>Backend Development</span>
+              <span>Machine Learning</span>
+              <span>AI Integration</span>
+              <span>Data-Driven Systems</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="skills">
-      <div class="container">
-        <div class="row text-center mb-5">
-          <div class="col">
-            <h2 class="section-title">My Skills</h2>
-            <div class="bar-accent"></div>
+      <!-- =========================================================
+        PROJECTS SECTION
+        - Carousel tetap dipakai agar tidak memanjang ke bawah.
+        - Asset gambar project diambil dari versi awal.
+        - Tombol View Details disejajarkan di bawah card.
+        ========================================================= -->
+      <section id="projects" class="section-block section-soft">
+        <div class="container">
+          <div class="section-header">
+            <h2>Featured Projects</h2>
           </div>
-        </div>
-        <div class="row justify-content-center g-4">
-          <div class="col-md-4 col-sm-6">
-            <div class="skills-item h-100">
-              <img src="img3/3.png" alt="Data Science" />
-              <h3>Machine Learning and AI</h3>
-              <p>Proficient in Python for statistical analysis, machine learning, computer vision, and generative AI.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="skills-item h-100">
-              <img src="img3/16.png" alt="Mobile" />
-              <h3>Software Development</h3>
-              <p>Experienced in developing cross-platform applications and backend integration.</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-10">
-            <div class="skills-item h-100">
-              <img src="img3/6.png" alt="Database" />
-              <h3>Database</h3>
-              <p>Designing efficient schemas and managing RDBMS (SQL) to support scalable backend integration.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== PROJECTS SECTION (CAROUSEL) ===== -->
-    <section id="projects">
-      <div class="container">
-        <div class="row text-center mb-5">
-          <div class="col">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="bar-accent"></div>
-          </div>
-        </div>
+          <div class="projects-carousel-wrapper">
+            <!-- Previous button -->
+            <button
+              class="carousel-btn carousel-btn-prev"
+              id="prevBtn"
+              aria-label="Previous project"
+            >
+              &#8592;
+            </button>
 
-        <div class="projects-carousel-wrapper">
-          <button class="carousel-btn carousel-btn-prev" id="prevBtn" aria-label="Previous">&#8592;</button>
+            <!-- Carousel viewport -->
+            <div class="projects-track-container">
+              <div class="projects-track" id="projectsTrack">
+                <!-- Project 1 -->
+                <div class="project-slide">
+                  <article class="project-card h-100">
+                    <div class="project-image-wrap">
+                      <img src="img/VERITAS AI.png" alt="Veritas AI" />
+                    </div>
 
-          <div class="projects-track-container">
-            <div class="projects-track" id="projectsTrack">
+                    <div class="project-body">
+                      <h3>Veritas AI</h3>
 
-              <!-- Project 1: Booking MathLab -->
-              <div class="project-slide">
-                <div class="card project-card h-100">
-                  <img src="img/bookingmathlab_logo_lebar-removebg.png" class="card-img-top" alt="Booking MathLab UNNES" />
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Booking MathLab UNNES</h5>
-                    <p class="card-text text-muted flex-grow-1">Booking Math Lab UNNES is a cross platform application (for android, and desktop) that functions for booking (user) and management (admin) rooms and tools in Mathematics Laboratory Universitas Negeri Semarang.</p>
-                    <a href="https://github.com/Alfian-DA-ML/bookingmathlabunnes" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
-                  </div>
+                      <p>
+                        AI-assisted news verification platform that analyzes
+                        article credibility using claim extraction, evidence
+                        retrieval, and Gemini-powered reasoning. Built with PHP,
+                        FastAPI, Supabase PostgreSQL, and a modern responsive
+                        web interface..
+                      </p>
+
+                      <a
+                        href="https://github.com/Alfian-DA-ML/veritas-ai"
+                        class="btn-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Details
+                      </a>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-slide">
+                  <article class="project-card h-100">
+                    <div class="project-image-wrap">
+                      <img
+                        src="img/bookingmathlab_logo_lebar-removebg.png"
+                        alt="Booking MathLab UNNES"
+                      />
+                    </div>
+
+                    <div class="project-body">
+                      <h3>Booking MathLab UNNES</h3>
+
+                      <p>
+                        Booking Math Lab UNNES is a cross-platform application
+                        for Android and desktop that supports room and equipment
+                        booking workflows in Mathematics Laboratory Universitas
+                        Negeri Semarang.
+                      </p>
+
+                      <a
+                        href="https://github.com/Alfian-DA-ML/bookingmathlabunnes"
+                        class="btn-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Details
+                      </a>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-slide">
+                  <article class="project-card h-100">
+                    <div class="project-image-wrap">
+                      <img src="img/Y.png" alt="SIBI's AI" />
+                    </div>
+
+                    <div class="project-body">
+                      <h3>SIBI's AI</h3>
+
+                      <p>
+                        Real-time computer vision application to recognize
+                        Indonesian Sign Language alphabets using MediaPipe and a
+                        custom lightweight CNN model.
+                      </p>
+
+                      <a
+                        href="https://github.com/Alfian-DA-ML/SIBI-s-AI"
+                        class="btn-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Details
+                      </a>
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-slide">
+                  <article class="project-card h-100">
+                    <div class="project-image-wrap">
+                      <img src="img/gradcam.png" alt="UFC-TB" />
+                    </div>
+
+                    <div class="project-body">
+                      <h3>UFC-TB</h3>
+
+                      <p>
+                        Lightweight CNN architecture for chest X-ray
+                        tuberculosis classification, supported with model
+                        evaluation and Grad-CAM-based interpretability.
+                      </p>
+
+                      <a
+                        href="https://drive.google.com/drive/folders/1NFhDe4m4dZ-IN_6iDfPrR9QVdP0gfqsS?hl=ID"
+                        class="btn-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Details
+                      </a>
+                    </div>
+                  </article>
                 </div>
               </div>
+            </div>
 
-              <!-- Project 2: SIBI's AI -->
-              <div class="project-slide">
-                <div class="card project-card h-100">
-                  <img src="img/Y.png" class="card-img-top" alt="SIBI's AI" />
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">SIBI's AI</h5>
-                    <p class="card-text text-muted flex-grow-1">Real-time computer vision application to recognize Indonesian Sign Language (SIBI) alphabets (A-Y) using MediaPipe and a custom lightweight CNN (SIBINet).</p>
-                    <a href="https://github.com/Alfian-DA-ML/SIBI-s-AI" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
-                  </div>
-                </div>
-              </div>
+            <!-- Next button -->
+            <button
+              class="carousel-btn carousel-btn-next"
+              id="nextBtn"
+              aria-label="Next project"
+            >
+              &#8594;
+            </button>
+          </div>
 
-              <!-- Project 3: SIPATEN -->
-              <div class="project-slide">
-                <div class="card project-card h-100">
-                  <img src="img/SIPATEN.png" class="card-img-top" alt="SIPATEN" />
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">SIPATEN</h5>
-                    <p class="card-text text-muted flex-grow-1">SIPATEN: Sistem Informasi Pantauan Tentang Kinerja (Private APPS for staff BPS Kab. Pekalongan).</p>
-                    <a href="https://drive.google.com/drive/folders/1NFhDe4m4dZ-IN_6iDfPrR9QVdP0gfqsS?hl=ID" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
-                  </div>
-                </div>
-              </div>
+          <!-- Carousel dots -->
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </section>
 
-              <!-- Project 4: UFC-TB -->
-              <div class="project-slide">
-                <div class="card project-card h-100">
-                  <img src="img/gradcam.png" class="card-img-top" alt="UFC-TB" />
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">UFC-TB: Unified Framework Classification for Tuberculosis</h5>
-                    <p class="card-text text-muted flex-grow-1">UFC-TB is a lightweight CNN architecture designed for chest X-ray classification, combining residual connections, depthwise convolution, and Grad-CAM-based model interpretability.</p>
-                    <a href="https://drive.google.com/drive/folders/1NFhDe4m4dZ-IN_6iDfPrR9QVdP0gfqsS?hl=ID" class="btn btn-primary rounded-pill mt-3 align-self-start" target="_blank">View Details</a>
-                  </div>
-                </div>
-              </div>
+      <!-- =========================================================
+        SKILLS SECTION
+        Simple, singkat, dan hover effect sama seperti project card.
+        ========================================================= -->
+      <section id="skills" class="section-block">
+        <div class="container">
+          <div class="section-header">
+            <h2>Technical Skills</h2>
+          </div>
 
-              <!-- TAMBAH PROJECT BARU: copy blok .project-slide di atas -->
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3>Backend</h3>
+              <p>PHP · REST API · JWT · PostgreSQL · MySQL</p>
+            </div>
 
+            <div class="skill-card">
+              <h3>AI / ML</h3>
+              <p>Python · FastAPI · Computer Vision · Gen AI</p>
+            </div>
+
+            <div class="skill-card">
+              <h3>Tools</h3>
+              <p>Git · GitHub · Deployment · Hosting</p>
             </div>
           </div>
-
-          <button class="carousel-btn carousel-btn-next" id="nextBtn" aria-label="Next">&#8594;</button>
         </div>
+      </section>
 
-        <!-- Dots Indikator -->
-        <div class="carousel-dots" id="carouselDots"></div>
-
-      </div>
-    </section>
-    <!-- ===== END PROJECTS SECTION ===== -->
-
-    <section id="contact" class="text-center">
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="bar-accent"></div>
-            <p class="text-muted mt-3">Feel free to contact me through any of the platforms provided below</p>
+      <!-- =========================================================
+        CONTACT SECTION
+        Footer tetap simple.
+        ========================================================= -->
+      <section id="contact" class="section-block section-soft contact-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Let's Connect</h2>
           </div>
-        </div>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-          <a href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=adipratamaalfian45@gmail.com" target="_blank">
-            <img src="img5/Gmail.png" alt="Email" />
-          </a>
-          <a href="https://wa.me/6285292347543" target="_blank">
-            <img src="img5/Whatsapp_icon.webp" alt="WhatsApp" />
-          </a>
-          <a href="https://www.linkedin.com/in/alfian19/" target="_blank">
-            <img src="img5/linkedin-logo-512x512.png" alt="LinkedIn" />
-          </a>
-          <a href="https://github.com/Alfian-DA-ML" target="_blank">
-            <img src="img5/github_512_black.png" alt="GitHub" />
-          </a>
-        </div>
-        <footer class="mt-5 pt-4 border-top text-muted small">
-          &copy; 2025 Alfian Adi Pratama.
-        </footer>
-      </div>
-    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          <div class="contact-links">
+            <a
+              href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=adipratamaalfian45@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+            >
+              <img src="img5/Gmail.png" alt="Email" />
+            </a>
 
-    <!-- ===== CAROUSEL SCRIPT ===== -->
+            <a
+              href="https://wa.me/6285292347543"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <img src="img5/Whatsapp_icon.webp" alt="WhatsApp" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/alfian19/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <img src="img5/linkedin-logo-512x512.png" alt="LinkedIn" />
+            </a>
+
+            <a
+              href="https://github.com/Alfian-DA-ML"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <img src="img5/github_512_black.png" alt="GitHub" />
+            </a>
+          </div>
+
+          <footer class="site-footer">
+            <p>© 2026 Alfian Adi Pratama.</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================================
+      BOOTSTRAP SCRIPT
+      ========================================================= -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- =========================================================
+      CUSTOM SCRIPT
+      - Navbar active state
+      - Mobile navbar auto close
+      - Project carousel
+      ========================================================= -->
     <script>
+      /*
+        =========================================================
+        NAVBAR ACTIVE STATE
+        =========================================================
+
+        Fungsi:
+        1. Saat menu diklik, class active pindah ke menu tersebut.
+        2. Saat user scroll manual, active menu ikut section yang terlihat.
+        3. Di mobile, navbar otomatis tertutup setelah menu diklik.
+      */
+
+      const navbarCollapse = document.getElementById("navbarNav");
+      const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+      function setActiveLink(activeLink) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+        });
+
+        activeLink.classList.add("active");
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          setActiveLink(link);
+
+          if (navbarCollapse.classList.contains("show")) {
+            const collapse = new bootstrap.Collapse(navbarCollapse, {
+              toggle: false,
+            });
+
+            collapse.hide();
+          }
+        });
+      });
+
+      const sections = document.querySelectorAll("section[id]");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: 0,
+      };
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const sectionId = entry.target.getAttribute("id");
+          const activeLink = document.querySelector(
+            `.navbar-nav .nav-link[href="#${sectionId}"]`,
+          );
+
+          if (activeLink) {
+            setActiveLink(activeLink);
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach((section) => {
+        sectionObserver.observe(section);
+      });
+
+      /*
+        =========================================================
+        PROJECT CAROUSEL
+        =========================================================
+
+        Fungsi:
+        - Desktop: 3 card terlihat.
+        - Tablet: 2 card terlihat.
+        - Mobile: 1 card terlihat.
+        - Button View Details tetap sejajar karena card body flex.
+        - Mobile bisa swipe kiri/kanan.
+      */
+
       (function () {
-        const track      = document.getElementById('projectsTrack');
-        const prevBtn    = document.getElementById('prevBtn');
-        const nextBtn    = document.getElementById('nextBtn');
-        const dotsCont   = document.getElementById('carouselDots');
-        const slides     = Array.from(track.querySelectorAll('.project-slide'));
+        const track = document.getElementById("projectsTrack");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        const dotsContainer = document.getElementById("carouselDots");
+        const slides = Array.from(track.querySelectorAll(".project-slide"));
 
-        let current    = 0;
-        let lastWidth  = window.innerWidth; // BUGFIX: simpan lebar awal
+        let current = 0;
+        let lastWidth = window.innerWidth;
 
-        function getVisible() {
+        function getVisibleSlides() {
           if (window.innerWidth >= 992) return 3;
-          if (window.innerWidth >= 576) return 2;
+          if (window.innerWidth >= 768) return 2;
           return 1;
         }
 
         function getMaxIndex() {
-          return Math.max(0, slides.length - getVisible());
+          return Math.max(0, slides.length - getVisibleSlides());
         }
 
         function buildDots() {
-          dotsCont.innerHTML = '';
+          dotsContainer.innerHTML = "";
+
           for (let i = 0; i <= getMaxIndex(); i++) {
-            const dot = document.createElement('button');
-            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-            dot.setAttribute('aria-label', 'Slide ' + (i + 1));
-            dot.addEventListener('click', () => goTo(i));
-            dotsCont.appendChild(dot);
+            const dot = document.createElement("button");
+            dot.className = "carousel-dot" + (i === current ? " active" : "");
+            dot.setAttribute("aria-label", "Go to project slide " + (i + 1));
+
+            dot.addEventListener("click", () => {
+              goTo(i);
+            });
+
+            dotsContainer.appendChild(dot);
           }
         }
 
         function updateDots() {
-          dotsCont.querySelectorAll('.carousel-dot')
-            .forEach((d, i) => d.classList.toggle('active', i === current));
+          dotsContainer
+            .querySelectorAll(".carousel-dot")
+            .forEach((dot, index) => {
+              dot.classList.toggle("active", index === current);
+            });
         }
 
         function goTo(index) {
-          const maxIndex  = getMaxIndex();
-          current         = Math.max(0, Math.min(index, maxIndex));
-          const gap       = 24;
-          const slideW    = slides[0].offsetWidth;
-          track.style.transform = `translateX(-${current * (slideW + gap)}px)`;
+          const maxIndex = getMaxIndex();
+
+          current = Math.max(0, Math.min(index, maxIndex));
+
+          const slideWidth = slides[0].offsetWidth;
+          const gap = 24;
+          const moveX = current * (slideWidth + gap);
+
+          track.style.transform = `translateX(-${moveX}px)`;
+
           prevBtn.disabled = current === 0;
           nextBtn.disabled = current >= maxIndex;
+
           updateDots();
         }
 
-        prevBtn.addEventListener('click', () => goTo(current - 1));
-        nextBtn.addEventListener('click', () => goTo(current + 1));
+        prevBtn.addEventListener("click", () => {
+          goTo(current - 1);
+        });
 
-        // ── Touch / swipe ──────────────────────────────────────────
+        nextBtn.addEventListener("click", () => {
+          goTo(current + 1);
+        });
+
+        /*
+          Swipe support untuk mobile.
+        */
         let touchStartX = 0;
         let touchStartY = 0;
-        let isHorizSwipe = false;
+        let isHorizontalSwipe = false;
 
-        track.addEventListener('touchstart', (e) => {
-          touchStartX  = e.touches[0].clientX;
-          touchStartY  = e.touches[0].clientY;
-          isHorizSwipe = false;
-        }, { passive: true });
+        track.addEventListener(
+          "touchstart",
+          (event) => {
+            touchStartX = event.touches[0].clientX;
+            touchStartY = event.touches[0].clientY;
+            isHorizontalSwipe = false;
+          },
+          { passive: true },
+        );
 
-        track.addEventListener('touchmove', (e) => {
-          const dx = Math.abs(e.touches[0].clientX - touchStartX);
-          const dy = Math.abs(e.touches[0].clientY - touchStartY);
-          // Tentukan arah dominan di gerakan pertama
-          if (!isHorizSwipe && dx > dy && dx > 8) isHorizSwipe = true;
-        }, { passive: true });
+        track.addEventListener(
+          "touchmove",
+          (event) => {
+            const dx = Math.abs(event.touches[0].clientX - touchStartX);
+            const dy = Math.abs(event.touches[0].clientY - touchStartY);
 
-        track.addEventListener('touchend', (e) => {
-          if (!isHorizSwipe) return; // abaikan jika dominan vertikal
-          const diff = touchStartX - e.changedTouches[0].clientX;
-          if (Math.abs(diff) > 50) {
-            diff > 0 ? goTo(current + 1) : goTo(current - 1);
-          }
-        }, { passive: true });
+            if (!isHorizontalSwipe && dx > dy && dx > 8) {
+              isHorizontalSwipe = true;
+            }
+          },
+          { passive: true },
+        );
 
-        // ── Resize: hanya reset jika LEBAR berubah ─────────────────
-        // Browser mobile sering trigger resize saat address bar
-        // naik/turun (hanya tinggi berubah) → carousel jangan di-reset
+        track.addEventListener(
+          "touchend",
+          (event) => {
+            if (!isHorizontalSwipe) return;
+
+            const diff = touchStartX - event.changedTouches[0].clientX;
+
+            if (Math.abs(diff) > 50) {
+              diff > 0 ? goTo(current + 1) : goTo(current - 1);
+            }
+          },
+          { passive: true },
+        );
+
+        /*
+          Resize handler:
+          Browser mobile sering memicu resize ketika address bar naik/turun.
+          Karena itu carousel hanya di-reset kalau lebar layar berubah.
+        */
         let resizeTimer;
-        window.addEventListener('resize', () => {
+
+        window.addEventListener("resize", () => {
           const newWidth = window.innerWidth;
+
           if (newWidth !== lastWidth) {
             lastWidth = newWidth;
+
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(init, 150);
           }
         });
 
         function init() {
-          current = 0;
+          current = Math.min(current, getMaxIndex());
           buildDots();
-          goTo(0);
+          goTo(current);
         }
 
         init();
       })();
     </script>
-    <!-- ===== END CAROUSEL SCRIPT ===== -->
-
   </body>
 </html>
